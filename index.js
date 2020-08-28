@@ -24,7 +24,7 @@ var food;
         snake.draw();
 
         snake.eat();
-    }, 250)
+    }, 100)
 })();
 
 
