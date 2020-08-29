@@ -1,6 +1,39 @@
 const canvas = document.querySelector(".canvas");
 const ctx = canvas.getContext("2d");
 
+const up = document.getElementById("up");
+const down = document.getElementById("down");
+const left = document.getElementById("left");
+const right = document.getElementById("right");
+
+
+up.addEventListener("click", function(){
+    if(direction != 'DOWN') {
+        direction = 'UP';
+    }
+    snake.changeDirection(direction);
+});
+
+down.addEventListener("click", function(){
+    if(direction != 'UP') {
+        direction = 'DOWN';
+    }
+    snake.changeDirection(direction);
+ });
+
+left.addEventListener("click", function(){
+    if(direction != 'RIGHT') {
+        direction = 'LEFT';
+    }
+    snake.changeDirection(direction);
+});
+
+right.addEventListener("click", function(){
+    if(direction != 'LEFT') {
+        direction = 'RIGHT';
+    }
+    snake.changeDirection(direction);
+});
 
 //set up canvas height and width
 // let height, width, rows, columns;
@@ -78,7 +111,7 @@ let food;
     }, 150)
 })();
 
-let direction = 'RIGHT';
+
 
 //change snake direction
 window.addEventListener('keydown', (event) => {
