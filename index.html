@@ -2,11 +2,18 @@
 <html>
     <head>
         <title>Snake Game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
-        <canvas class="canvas" height="300px" width="300px" style="background-color: black"></canvas>
+        <div class="record">
+            <p class = "score" style="color: #ffa372"></p>
+            <p class = "best-score" style="color: #ed6663"></p>
+        </div>
+        <canvas class="canvas"></canvas>
         <script src="./food.js"></script>
         <script src="./snake.js"></script>
+        <script src="./record.js"></script>
         <script src="./index.js"></script>
         
         
