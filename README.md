@@ -13,4 +13,6 @@ Just a game made by JavaScript
 
 https://luutienphat.github.io/snake-game/
 
-@2020 Created by LUUTIENPHAT
+## Lienced
+
+[MIT](https://choosealicense.com/licenses/mit/) © 
