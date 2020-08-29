@@ -15,4 +15,4 @@ https://luutienphat.github.io/snake-game/
 
 ## Lienced
 
-[MIT](https://choosealicense.com/licenses/mit/) © 
+[MIT](https://choosealicense.com/licenses/mit/)
