@@ -1,5 +1,7 @@
 # Snake Game
 
+Just a game made by JavaScript
+
 ## Desktop
 ![Imgur Image](https://imgur.com/vVNKhh3.png)
 
