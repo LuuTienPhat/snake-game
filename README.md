@@ -5,8 +5,8 @@
 
 ![Imgur Image](https://imgur.com/LQG9190.png)
 
-@2020 Created by LUUTIENPHAT
-
-## Link
+## Demo
 
 https://luutienphat.github.io/snake-game/
+
+@2020 Created by LUUTIENPHAT
