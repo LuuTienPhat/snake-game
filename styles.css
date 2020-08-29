@@ -35,6 +35,7 @@ canvas {
 }
 
 .arrows {
+    display: none;
     height: 200px;
     margin-top: 20px;
     text-align: center;
@@ -55,7 +56,7 @@ svg {
     stroke: #ed6663;
 }
 
-@media(max-width: 480px){
+@media only screen and (max-width: 480px){
     .record {
         font-size: 20px;
         width: 300px;

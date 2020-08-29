@@ -1,82 +1,65 @@
-const canvas = document.querySelector(".canvas");
-const ctx = canvas.getContext("2d");
-
+const arrows = document.querySelector(".arrows")
 const up = document.getElementById("up");
 const down = document.getElementById("down");
 const left = document.getElementById("left");
 const right = document.getElementById("right");
 
+let hasTouchScreen = false;
+if ("maxTouchPoints" in navigator) { 
+    hasTouchScreen = navigator.maxTouchPoints > 0;
+} else if ("msMaxTouchPoints" in navigator) {
+    hasTouchScreen = navigator.msMaxTouchPoints > 0; 
+} else {
+    let mQ = window.matchMedia && matchMedia("(pointer:coarse)");
+    if (mQ && mQ.media === "(pointer:coarse)") {
+        hasTouchScreen = !!mQ.matches;
+    } else if ('orientation' in window) {
+        hasTouchScreen = true; // deprecated, but good fallback
+    } else {
+        // Only as a last resort, fall back to user agent sniffing
+        let UA = navigator.userAgent;
+        hasTouchScreen = (
+            /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
+            /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA)
+        );
+    }
+}
+if (hasTouchScreen)
+    arrows.style.display="unset";
 
-up.addEventListener("click", function(){
-    if(direction != 'DOWN') {
+up.addEventListener("click", function () {
+    if (direction != 'DOWN') {
         direction = 'UP';
     }
     snake.changeDirection(direction);
 });
 
-down.addEventListener("click", function(){
-    if(direction != 'UP') {
+down.addEventListener("click", function () {
+    if (direction != 'UP') {
         direction = 'DOWN';
     }
     snake.changeDirection(direction);
- });
+});
 
-left.addEventListener("click", function(){
-    if(direction != 'RIGHT') {
+left.addEventListener("click", function () {
+    if (direction != 'RIGHT') {
         direction = 'LEFT';
     }
     snake.changeDirection(direction);
 });
 
-right.addEventListener("click", function(){
-    if(direction != 'LEFT') {
+right.addEventListener("click", function () {
+    if (direction != 'LEFT') {
         direction = 'RIGHT';
     }
     snake.changeDirection(direction);
 });
 
-//set up canvas height and width
-// let height, width, rows, columns;
-
-let scale = 20;
-
-(function setupCanvas(){
-    const screenWidth = window.innerWidth;
-    if(window.innerWidth < 480 ) {
-        scale = 15;
-
-        canvas.height = 300;
-        canvas.width = 300;
-    }
-    else if(screenWidth > 480) {
-        scale = 20;
-        
-        canvas.height = 400;
-        canvas.width = 400;
-    }
-
-    // else if(screenWidth > 650){
-    //     scale = 20;
-        
-    //     canvas.height = 400;
-    //     canvas.width = 400;
-    // }
-
-})();
-
-const height = canvas.height;
-const width = canvas.width;
-
-const rows = canvas.height / scale;
-const columns = canvas.width / scale;
-
-console.log(window.innerWidth);
-
 
 let snake;
 let food;
 
-(function setup(){
+(function setup() {
     //create snake and food
     snake = new Snake();
     food = new Food();
@@ -92,7 +75,7 @@ let food;
 
     //loop after 150 millisecond
     window.setInterval(() => {
-        ctx.clearRect(0, 0,canvas.width, canvas.height);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         //draw food;
         food.draw();
@@ -116,19 +99,16 @@ let food;
 //change snake direction
 window.addEventListener('keydown', (event) => {
     const keyCode = event.keyCode;
-    if(keyCode === 37 && direction !== "RIGHT") {
+    if (keyCode === 37 && direction !== "RIGHT") {
         direction = "LEFT";
-    }
-    else if(keyCode === 38 && direction !== "DOWN") {
-        direction = "UP"; 
-    }
-    else if(keyCode === 39 && direction !== "LEFT") {
+    } else if (keyCode === 38 && direction !== "DOWN") {
+        direction = "UP";
+    } else if (keyCode === 39 && direction !== "LEFT") {
         direction = "RIGHT"
-    }
-    else if(keyCode === 40 && direction !== "UP") {
-        direction = "DOWN";    
+    } else if (keyCode === 40 && direction !== "UP") {
+        direction = "DOWN";
     }
 
     snake.changeDirection(direction);
-      
+
 });
