@@ -1,5 +1,5 @@
 # snake-game
-(![Imgur Image](http://i.imgur.com/zTONrOD.jpg))
+![Imgur Image](https://imgur.com/vVNKhh3)
 @2020 Created by LUUTIENPHAT
 
 
