@@ -1,4 +1,6 @@
 # Snake Game
+
+## Desktop
 ![Imgur Image](https://imgur.com/vVNKhh3.png)
 
 ## Phone
