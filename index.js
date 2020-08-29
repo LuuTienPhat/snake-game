@@ -1,16 +1,44 @@
 const canvas = document.querySelector(".canvas");
 const ctx = canvas.getContext("2d");
-const scale = 20;
+
 
 //set up canvas height and width
-canvas.height = 600;
-canvas.width = 600;
+// let height, width, rows, columns;
+
+let scale = 20;
+
+(function setupCanvas(){
+    const screenWidth = window.innerWidth;
+    if(window.innerWidth < 480 ) {
+        scale = 15;
+
+        canvas.height = 300;
+        canvas.width = 300;
+    }
+    else if(screenWidth > 480 && screenWidth <= 650) {
+        scale = 20;
+        
+        canvas.height = 400;
+        canvas.width = 400;
+    }
+
+    else if(screenWidth > 650){
+        scale = 20;
+        
+        canvas.height = 600;
+        canvas.width = 600;
+    }
+
+})();
 
 const height = canvas.height;
 const width = canvas.width;
 
 const rows = canvas.height / scale;
 const columns = canvas.width / scale;
+
+console.log(window.innerWidth);
+
 
 let snake;
 let food;

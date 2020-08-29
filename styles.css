@@ -32,3 +32,14 @@ canvas {
     background-color: transparent;
     border: 20px solid #4e89ae;
 }
+
+@media(max-width: 480px){
+    .record {
+        font-size: 20px;
+        width: 300px;
+    }
+
+    canvas {
+        border: 15px solid #4e89ae
+    }
+}
