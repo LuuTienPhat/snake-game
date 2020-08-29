@@ -21,7 +21,7 @@ body {
 
 .record {
     margin-bottom: 20px;
-    width: 400px;
+    width: 600px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,8 +35,10 @@ canvas {
 }
 
 .arrows {
+    height: auto;
     display: none;
-    height: 200px;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
     text-align: center;
 }
@@ -56,13 +58,62 @@ svg {
     stroke: #ed6663;
 }
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 359px){
     .record {
         font-size: 20px;
+        width: 200px;
+    }
+
+    canvas {
+        border: 10px solid #4e89ae
+    }
+
+    img {
+        width: 60px;
+    }
+
+    svg {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 479px) and (min-width: 360px){
+    .record {
         width: 300px;
     }
 
     canvas {
         border: 15px solid #4e89ae
+    }
+}
+
+@media only screen and (max-width: 799px) and (min-width: 480px){
+    .record {
+        width: 400px;
+    }
+
+    img {
+        width: 90px;
+    }
+
+    svg {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media only screen and (min-width: 800px){
+    .record {
+        width: 600px;
+    }
+
+    img {
+        width: 110px;
+    }
+
+    svg {
+        height: 100px;
+        width: 100px;
     }
 }
