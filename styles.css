@@ -26,11 +26,33 @@ body {
     justify-content: space-between;
     align-items: center;
     font-size: 30px;
+    font-weight: bold;
 }
 
 canvas {
     background-color: transparent;
     border: 20px solid #4e89ae;
+}
+
+.arrows {
+    height: 200px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+img {
+    width: 70px;
+}
+
+svg {
+    stroke: #ffa372;
+    height: 60px;
+    width: 60px;
+    stroke-width: 2.5;
+}
+
+.red{
+    stroke: #ed6663;
 }
 
 @media(max-width: 480px){

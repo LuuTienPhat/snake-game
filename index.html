@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Snake Game</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./styles.css">
-    </head>
-    <body>
-        <div class="record">
-            <p class = "score" style="color: #ffa372"></p>
-            <p class = "best-score" style="color: #ed6663"></p>
-        </div>
-        <canvas class="canvas"></canvas>
-        <script src="./food.js"></script>
-        <script src="./snake.js"></script>
-        <script src="./record.js"></script>
-        <script src="./index.js"></script>
-        
-        
-    </body>
+
+<head>
+    <title>Snake Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+    <div class="record">
+        <p class="score" style="color: #ffa372"></p>
+        <p class="best-score" style="color: #ed6663"></p>
+    </div>
+
+    <canvas class="canvas"></canvas>
+
+    <table class="arrows">
+        <tr>
+            <td colspan="3"><i id = "up" data-feather="arrow-up-circle"></i></td>
+        </tr>
+        <tr>
+            <td><i class="red" id = "left" data-feather="arrow-left-circle"></i></td>
+            <td><img /></td>
+            <td><i class="red" id = "right" data-feather="arrow-right-circle"></i></td>
+        </tr>
+        <tr>
+            <td colspan="3"><i id = "down" data-feather="arrow-down-circle"></i></td>
+        </tr>
+
+    </table>
+    <script>
+        feather.replace()
+    </script>
+    <script src="./food.js"></script>
+    <script src="./snake.js"></script>
+    <script src="./record.js"></script>
+    <script src="./index.js"></script>
     
-    
+
+</body>
+
+
 </html>
