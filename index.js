@@ -15,19 +15,19 @@ let scale = 20;
         canvas.height = 300;
         canvas.width = 300;
     }
-    else if(screenWidth > 480 && screenWidth <= 650) {
+    else if(screenWidth > 480) {
         scale = 20;
         
         canvas.height = 400;
         canvas.width = 400;
     }
 
-    else if(screenWidth > 650){
-        scale = 20;
+    // else if(screenWidth > 650){
+    //     scale = 20;
         
-        canvas.height = 600;
-        canvas.width = 600;
-    }
+    //     canvas.height = 400;
+    //     canvas.width = 400;
+    // }
 
 })();
 
