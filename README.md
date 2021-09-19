@@ -1,6 +1,6 @@
 # Snake Game
 
-A simple game, and also a childhood game for me :), i have got 20,000 points on my Nokia 1280 xD.
+A simple game, and also a childhood game for me :), i have got 200,000 points on my Nokia 1280 xD.
 
 ## Demo
 https://luutienphat.github.io/snake-game/
@@ -8,6 +8,9 @@ https://luutienphat.github.io/snake-game/
 ## I used:
   * HTML, CSS, Javascript
   * IDE: Visual Studio Code.
+
+## Detail:
+  * I used Local Storage to store personal records and for ranking.
 
 ## UI
   - I made two type of UI, for screen below 800px or have touch screen, the app will automatically render Phone UI, else it will show Desktop UI.
